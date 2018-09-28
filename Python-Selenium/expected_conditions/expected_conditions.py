@@ -11,10 +11,6 @@ driver.implicitly_wait(5)
 file = "file:///" + os.path.abspath("test.html")
 driver.get(file)
 
-# title_is(title) 判断title是否匹配，若完全匹配则返回True，否则返回False
-title = EC.title_is('this is tite')
-print(title(driver))
-
 # alert_is_present 判断alert是否存在，若存在则切换到alert，若不存在则返回false
 driver.find_element_by_id('button1').click()
 alert = EC.alert_is_present()
